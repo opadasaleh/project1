@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Navbar() {
   return (
-    <header className="flex flex-row justify-start items-center bg-[#101a2d] rounded-tr-full rounded-bl-full
+    <header className="flex flex-row justify-start items-center bg-[#032B52] rounded-tr-full rounded-bl-full
        p-4  border-2 border-[#DFC9A2] w-full px-10 max-w-[1200px] mx-auto shadow-2xl h-20 ">
 
 
@@ -13,11 +13,17 @@ export default function Navbar() {
         
         <img src={'/snake.png'}  className="w-20 h-20 
         p-4  "/>
-      <a className='text-[#DFC9A2] font-thin'>
+      <a className='text-[#DFC9A2] font-thin m-5'>
         <Link href="/">Home</Link>
       </a>
       <a className='text-[#DFC9A2] font-thin m-5'>
         <Link href="/shop">Shop</Link>
+      </a>
+      <a className='text-[#DFC9A2] font-thin m-5'>
+        <Link href="/contact">Contact</Link>
+      </a>
+      <a className='text-[#DFC9A2] font-thin m-5'>
+        <Link href="/about">About</Link>
       </a>
       </header>
   )
