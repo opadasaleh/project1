@@ -4,7 +4,6 @@ import Navbar from '../../../components/Navbar'
 function Page() {
   return (
     <main>
-      <Navbar />
     </main>
   )
 }

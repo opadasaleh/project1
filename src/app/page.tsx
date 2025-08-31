@@ -48,7 +48,7 @@ export default function Home() {
       </div>
 
       <div className="pt-10 flex">
-        <p className="text-5xl flex justify-start ml-70">Jewels of the season</p>
+        <p className="text-5xl flex justify-start ml-70">Jewels of the season</p> 
       </div>
 
       
