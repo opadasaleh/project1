@@ -7,4 +7,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
   ],
+  theme: {
+    extend: {
+      fontFamily: {
+        tangerine: ["Tangerine", "cursive"],
+        rouge: ["Rouge Script", "cursive"],
+      },
+    },
+  },
 };
