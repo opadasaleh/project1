@@ -13,8 +13,6 @@
     "@heroui/system": "^2.4.20",
     "@heroui/theme": "^2.4.20",
     "@prisma/client": "^6.15.0",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
     "framer-motion": "^12.23.12",
     "gsap": "^3.13.0",
     "lucide-react": "^0.542.0",
@@ -30,10 +28,9 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "daisyui": "^5.1.6",
+    "daisyui": "^5.1.5",
     "eslint": "^9",
     "eslint-config-next": "15.5.0",
-    "prisma": "^6.15.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

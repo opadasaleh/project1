@@ -1,6 +1,6 @@
 generator client {
   provider = "prisma-client-js"
-  output = "../../node_modules/.prisma/client"
+  output   = "../src/generated/prisma"
 }
 
 datasource db {
@@ -8,14 +8,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Product {
-  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+model items {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
   URL         String
   description String
   name        String
   price       Int
-  createdAT   DateTime @default(now())
-  updatedAT   DateTime @updatedAt
-
-  @@map("items")
 }
