@@ -1,14 +1,19 @@
 import Link from 'next/link';
 import '../app/globals.css';
+import { title } from 'process';
+export const metadata = {
+  title: "Flowmazone",
+  description: "We make ayour wallet cry",
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <nav>
-          
-        </nav>
+        <main className='flex justify-center'>
+
         {children}
+        </main>
       </body>
     </html>
   );
