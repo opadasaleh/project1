@@ -1,8 +1,18 @@
 import React from 'react';
 import { Button } from "@/components/ui/button"
+import { Prisma } from '@/generated/prisma';
+import { prisma } from '@/lib/db/prisma';
 
 export const metadata = {
     title: 'Add Product - Flowmazon',
+}
+async function addProduct(formData : FormData) {
+    "use server";
+    const name = formData.get("name")?.toString();    
+
+    await prisma.product.create({
+        data:{}
+    })
 }
 
 export default function AddProduct() {
@@ -11,7 +21,7 @@ export default function AddProduct() {
         <div className='  flex justify-center mt-50'>
             <div className="w-full max-w-md p-8 rounded-lg shadow-md border-4 bg-white">
                 <h1 className='text-2xl mb-5 font-bold '>Add Product</h1>
-                <form  >
+                <form  action={addProduct}>
                     <input
                         className='mb-3 w-full border-2 '
                         required
