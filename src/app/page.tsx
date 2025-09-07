@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollToPlugin,SplitText,TextPlugin);
 export default function Home() {
   return (
     <main >
-      <div className="min-h-screen bg-[url(/sand-photo.jpg)] bg-cover pt-">
+      <div className="min-h-screen bg-[url(/sand-photo.jpg)] bg-cover pt-5">
       <Navbar />
       
       <div className="dropping-texts text-7xl font-[tangerine] flex 
