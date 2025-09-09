@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button } from "@/components/ui/button"
 import { prisma } from '@/lib/db/prisma';
+import { redirect } from 'next/navigation'
+
 
 export const metadata = {
     title: 'Add Product - Flowmazon',
@@ -23,6 +25,8 @@ async function addProduct(formData: FormData) {
     await prisma.items.create({
         data: { name, description, imageUrl, price },
     });
+
+    redirect("/");
 }
 
 export default function AddProduct() {
@@ -58,7 +62,7 @@ export default function AddProduct() {
                             name='price'
                             placeholder='Price'
                         />
-                        <Button variant={'default'} className='bg-lime-500'>
+                        <Button variant={'default'} className='bg-green-400'>
                             Add Product
                         </Button>
                     </form>
@@ -66,4 +70,4 @@ export default function AddProduct() {
             </div>
         </main>
     )
-}
+}  
