@@ -8,16 +8,23 @@ export const metadata = {
 }
 async function addProduct(formData : FormData) {
     "use server";
-    const name = formData.get("name")?.toString();    
+    const name = formData.get("name")?.toString();
+    const description = formData.get("description")?.toString();
+    const imageUrl = formData.get("imageUrl")?.toString();
+    const price = Number(formData.get("price") || 0);
+    if (!name || !description || !imageUrl || !price) {
+        throw Error("Missing required fields");
+    }
 
+    console.log("@imageUrl: ");
     await prisma.product.create({
-        data:{}
-    })
+        data: { name, description, imageUrl, price },
+    });
 }
 
 export default function AddProduct() {
     return (
-        <main className='min-h-screen bg-[url(/sand-photo.jpg)] bg-cover pt-5'>
+        <main className='min-h-screen bg-black bg-cover pt-5'>
         <div className='  flex justify-center mt-50'>
             <div className="w-full max-w-md p-8 rounded-lg shadow-md border-4 bg-white">
                 <h1 className='text-2xl mb-5 font-bold '>Add Product</h1>
@@ -48,7 +55,7 @@ export default function AddProduct() {
                         name='price'
                         placeholder=' Price'
                     />
-                    <Button  variant={'default'} className='bg-amber-400'>Add Product</Button>
+                    <Button  variant={'default'} className='bg-lime-500'>Add Product</Button>
                 </form>
             </div>
             </div>

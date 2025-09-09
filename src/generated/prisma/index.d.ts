@@ -832,24 +832,24 @@ export namespace Prisma {
 
   export type ItemsMinAggregateOutputType = {
     id: string | null
-    URL: string | null
     description: string | null
+    imageUrl: string | null
     name: string | null
     price: number | null
   }
 
   export type ItemsMaxAggregateOutputType = {
     id: string | null
-    URL: string | null
     description: string | null
+    imageUrl: string | null
     name: string | null
     price: number | null
   }
 
   export type ItemsCountAggregateOutputType = {
     id: number
-    URL: number
     description: number
+    imageUrl: number
     name: number
     price: number
     _all: number
@@ -866,24 +866,24 @@ export namespace Prisma {
 
   export type ItemsMinAggregateInputType = {
     id?: true
-    URL?: true
     description?: true
+    imageUrl?: true
     name?: true
     price?: true
   }
 
   export type ItemsMaxAggregateInputType = {
     id?: true
-    URL?: true
     description?: true
+    imageUrl?: true
     name?: true
     price?: true
   }
 
   export type ItemsCountAggregateInputType = {
     id?: true
-    URL?: true
     description?: true
+    imageUrl?: true
     name?: true
     price?: true
     _all?: true
@@ -977,8 +977,8 @@ export namespace Prisma {
 
   export type ItemsGroupByOutputType = {
     id: string
-    URL: string
     description: string
+    imageUrl: string
     name: string
     price: number
     _count: ItemsCountAggregateOutputType | null
@@ -1004,8 +1004,8 @@ export namespace Prisma {
 
   export type itemsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    URL?: boolean
     description?: boolean
+    imageUrl?: boolean
     name?: boolean
     price?: boolean
   }, ExtArgs["result"]["items"]>
@@ -1014,21 +1014,21 @@ export namespace Prisma {
 
   export type itemsSelectScalar = {
     id?: boolean
-    URL?: boolean
     description?: boolean
+    imageUrl?: boolean
     name?: boolean
     price?: boolean
   }
 
-  export type itemsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "URL" | "description" | "name" | "price", ExtArgs["result"]["items"]>
+  export type itemsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "description" | "imageUrl" | "name" | "price", ExtArgs["result"]["items"]>
 
   export type $itemsPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "items"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: string
-      URL: string
       description: string
+      imageUrl: string
       name: string
       price: number
     }, ExtArgs["result"]["items"]>
@@ -1424,8 +1424,8 @@ export namespace Prisma {
    */
   interface itemsFieldRefs {
     readonly id: FieldRef<"items", 'String'>
-    readonly URL: FieldRef<"items", 'String'>
     readonly description: FieldRef<"items", 'String'>
+    readonly imageUrl: FieldRef<"items", 'String'>
     readonly name: FieldRef<"items", 'String'>
     readonly price: FieldRef<"items", 'Int'>
   }
@@ -1782,8 +1782,8 @@ export namespace Prisma {
 
   export const ItemsScalarFieldEnum: {
     id: 'id',
-    URL: 'URL',
     description: 'description',
+    imageUrl: 'imageUrl',
     name: 'name',
     price: 'price'
   };
@@ -1862,16 +1862,16 @@ export namespace Prisma {
     OR?: itemsWhereInput[]
     NOT?: itemsWhereInput | itemsWhereInput[]
     id?: StringFilter<"items"> | string
-    URL?: StringFilter<"items"> | string
     description?: StringFilter<"items"> | string
+    imageUrl?: StringFilter<"items"> | string
     name?: StringFilter<"items"> | string
     price?: IntFilter<"items"> | number
   }
 
   export type itemsOrderByWithRelationInput = {
     id?: SortOrder
-    URL?: SortOrder
     description?: SortOrder
+    imageUrl?: SortOrder
     name?: SortOrder
     price?: SortOrder
   }
@@ -1881,16 +1881,16 @@ export namespace Prisma {
     AND?: itemsWhereInput | itemsWhereInput[]
     OR?: itemsWhereInput[]
     NOT?: itemsWhereInput | itemsWhereInput[]
-    URL?: StringFilter<"items"> | string
     description?: StringFilter<"items"> | string
+    imageUrl?: StringFilter<"items"> | string
     name?: StringFilter<"items"> | string
     price?: IntFilter<"items"> | number
   }, "id">
 
   export type itemsOrderByWithAggregationInput = {
     id?: SortOrder
-    URL?: SortOrder
     description?: SortOrder
+    imageUrl?: SortOrder
     name?: SortOrder
     price?: SortOrder
     _count?: itemsCountOrderByAggregateInput
@@ -1905,60 +1905,60 @@ export namespace Prisma {
     OR?: itemsScalarWhereWithAggregatesInput[]
     NOT?: itemsScalarWhereWithAggregatesInput | itemsScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"items"> | string
-    URL?: StringWithAggregatesFilter<"items"> | string
     description?: StringWithAggregatesFilter<"items"> | string
+    imageUrl?: StringWithAggregatesFilter<"items"> | string
     name?: StringWithAggregatesFilter<"items"> | string
     price?: IntWithAggregatesFilter<"items"> | number
   }
 
   export type itemsCreateInput = {
     id?: string
-    URL: string
     description: string
+    imageUrl: string
     name: string
     price: number
   }
 
   export type itemsUncheckedCreateInput = {
     id?: string
-    URL: string
     description: string
+    imageUrl: string
     name: string
     price: number
   }
 
   export type itemsUpdateInput = {
-    URL?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
+    imageUrl?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     price?: IntFieldUpdateOperationsInput | number
   }
 
   export type itemsUncheckedUpdateInput = {
-    URL?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
+    imageUrl?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     price?: IntFieldUpdateOperationsInput | number
   }
 
   export type itemsCreateManyInput = {
     id?: string
-    URL: string
     description: string
+    imageUrl: string
     name: string
     price: number
   }
 
   export type itemsUpdateManyMutationInput = {
-    URL?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
+    imageUrl?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     price?: IntFieldUpdateOperationsInput | number
   }
 
   export type itemsUncheckedUpdateManyInput = {
-    URL?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
+    imageUrl?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     price?: IntFieldUpdateOperationsInput | number
   }
@@ -1991,8 +1991,8 @@ export namespace Prisma {
 
   export type itemsCountOrderByAggregateInput = {
     id?: SortOrder
-    URL?: SortOrder
     description?: SortOrder
+    imageUrl?: SortOrder
     name?: SortOrder
     price?: SortOrder
   }
@@ -2003,16 +2003,16 @@ export namespace Prisma {
 
   export type itemsMaxOrderByAggregateInput = {
     id?: SortOrder
-    URL?: SortOrder
     description?: SortOrder
+    imageUrl?: SortOrder
     name?: SortOrder
     price?: SortOrder
   }
 
   export type itemsMinOrderByAggregateInput = {
     id?: SortOrder
-    URL?: SortOrder
     description?: SortOrder
+    imageUrl?: SortOrder
     name?: SortOrder
     price?: SortOrder
   }
