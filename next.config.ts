@@ -1,7 +1,13 @@
-import type { NextConfig } from "next";
+import { hostname } from "os";
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   /* config options here */
+  images: {
+    remotePatterns: [{ hostname: "images.unsplash.com" }],
+  },
+  experimental: {
+    serverActions: true,
+  },
 };
 
 export default nextConfig;
