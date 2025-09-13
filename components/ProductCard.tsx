@@ -1,10 +1,11 @@
 import { Product } from "@prisma/client";
 import { prisma } from '@/lib/db/prisma'
+import { items } from "@/generated/prisma"
 
 import Link from "next/link"
 
 interface ProductCardPrtops {
-    product: Product;
+    product: items;
 }
 
 export default function ProductCard({product} :ProductCardPrtops ) {
