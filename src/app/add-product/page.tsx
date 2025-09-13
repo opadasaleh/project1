@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button"
 import { prisma } from '@/lib/db/prisma';
 import { redirect } from 'next/navigation'
+import FormSubmitButton from '../../../components/FormSubmitButton';
 
 
 export const metadata = {
@@ -19,7 +20,9 @@ async function addProduct(formData: FormData) {
         throw Error("Missing required fields");
     }
 
-    console.log("@imageUrl: ", imageUrl);
+    // You cannot see console.log output directly in the browser for server actions.
+    // To view the result, check your terminal where the Next.js server is running.
+    // The output will appear there when you submit the form.
 
     // Use 'items' instead of 'product' to match your schema
     await prisma.items.create({
@@ -62,9 +65,9 @@ export default function AddProduct() {
                             name='price'
                             placeholder='Price'
                         />
-                        <Button variant={'default'} className='bg-green-400'>
+                        <FormSubmitButton >
                             Add Product
-                        </Button>
+                        </FormSubmitButton>
                     </form>
                 </div>
             </div>
