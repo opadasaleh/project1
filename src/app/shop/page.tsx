@@ -1,11 +1,17 @@
 import React from 'react'
 import Navbar from '../../../components/Navbar'
+import { Prisma } from '@/generated/prisma'
+import { prisma } from '@/lib/db/prisma'
 
-function Page() {
+export default async function Shop() {
+  const products = await prisma.items.findMany({
+    orderBy:{id:"desc"}
+  })
+
   return (
-    <main>
-    </main>
+    <div>
+      
+    </div>
   )
 }
-
-export default Page
+export default Shop
