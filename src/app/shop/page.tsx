@@ -12,8 +12,8 @@ import ProductCard from '../../../components/ProductCard'
 
   return (
     <div className='flex '>
-      <CardProduct product={products[0]} />
-      {/* <ProductCard /> */}
+      {/* <CardProduct product={products[0]} /> */}
+      <ProductCard product={products[0]}/>
     </div>
   )
 }
