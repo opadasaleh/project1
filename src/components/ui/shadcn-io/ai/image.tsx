@@ -1,4 +1,7 @@
-import { cn } from '@repo/shadcn-ui/lib/utils';
+// If you are using the official shadcn/ui package, update the import as follows:
+import { cn } from '@/lib/utils';
+// Or, if you have a local utils file, adjust the path accordingly:
+// import { cn } from '../../../lib/utils';
 import type { Experimental_GeneratedImage } from 'ai';
 
 export type ImageProps = Experimental_GeneratedImage & {
