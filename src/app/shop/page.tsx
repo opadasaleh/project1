@@ -12,8 +12,20 @@ import ProductCard from '../../../components/ProductCard'
 
   return (
     <div className='flex '>
+      <CardProduct product={products[0]} />
+      <CardProduct product={products[1]} />
+      <CardProduct product={products[2]} />
+      <CardProduct product={products[2]} />
+      <CardProduct product={products[2]} />
+      <CardProduct product={products[2]} />
+      <CardProduct product={products[2]} />
+      <CardProduct product={products[2]} />
+      <CardProduct product={products[2]} />
+      <CardProduct product={products[2]} />
+      <CardProduct product={products[2]} />
+      <CardProduct product={products[2]} />
       {/* <CardProduct product={products[0]} /> */}
-      <ProductCard product={products[0]}/>
+      {/* <ProductCard product={products[0]}/> */}
     </div>
   )
 }
