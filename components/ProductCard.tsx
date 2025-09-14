@@ -13,6 +13,13 @@ export default function ProductCard({product} :ProductCardPrtops ) {
         <Link
         href={"/products/" + product.id } 
         className="w-full bg-base-100 hover:shadow-xl"
-        />
+        >
+            <div className="">
+                <h2>
+                    {product.name}
+                </h2>
+                    <p>{product.description}</p>
+            </div>
+        </Link>
     )
 }
