@@ -16,7 +16,7 @@ export default function Home() {
       
       <div className="dropping-texts text-7xl font-[tangerine] flex 
        text-[#ffffffc3] break-all md:break-all justify-start ml-50 pt-30 ">
-        Syro Where We build 
+        {/* Syro Where We build  */}
         {/* <div>Dream</div>
         <div>Memore</div>
         <div>Goal</div>
