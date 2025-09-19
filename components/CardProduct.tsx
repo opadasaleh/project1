@@ -16,9 +16,34 @@ interface CardProductProps {
     product: items  // Use 'items' instead of 'Product'
 }
 
-export default function CardProduct({ product }: CardProductProps) {
+export default function CardProduct({ product }: CardProductProps ) {
     return (
-        <div className="w-full p-6 grid grid-row-4 gap-4 ">
+        <div className="w-full pt-5  ">
+
+            {/* <Link ></Link> */}
+            <a href="/item">
+            <Card className="max-w-xl w-45">
+                <CardContent>
+                    <div className="mt-4">
+                        <img src={product.imageUrl} alt={product.description} className="w-200 aspect-square h-[150px] object-cover border-2" />
+                    </div>
+                    <CardHeader>
+                        <div className="flex justify-start">
+                            <h1>{product.name}</h1>
+                        </div>
+                </CardHeader>
+                    <CardDescription className="text-xs mb-2 line-clamp-2">{product.description}</CardDescription>
+                {/* <CardTitle>{product.name}</CardTitle> */}
+                </CardContent>
+                <CardFooter>{product.price}</CardFooter>
+
+
+
+
+
+
+
+
 
             {/* <Card className="w-48">
                 <CardContent className="p-3">
@@ -61,20 +86,8 @@ export default function CardProduct({ product }: CardProductProps) {
 
 
 
-            <Card className="max-w-5xl w-45 h-full">
-                <CardContent>
-                    <div className="mt-4">
-                        <img src={product.imageUrl} alt={product.description} className="w-200 aspect-square h-[150px] object-cover border-2" />
-                    </div>
-                <CardHeader>
-                    <h1>{product.name}</h1>
-                </CardHeader>
-                    <CardDescription className="text-xs mb-2 line-clamp-2">{product.description}</CardDescription>
-                {/* <CardTitle>{product.name}</CardTitle> */}
-                </CardContent>
-                <CardFooter>CardFooter</CardFooter>
             </Card>
-
+</a>
         </div>
     )
 }
