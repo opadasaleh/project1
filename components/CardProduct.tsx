@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import {
     Card,
     CardContent,
@@ -6,88 +7,43 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card"
-import { Image } from "@/components/ui/shadcn-io/ai/image";
-import { Link, StarIcon } from "lucide-react"
+} from "@/components/ui/card";
+// if you need the icon, rename the import:
+import { Link as LinkIcon, StarIcon } from "lucide-react";
 // Import the correct type from your generated Prisma client
-import { items } from "@/generated/prisma"
+import { items } from "@/generated/prisma";
 
 interface CardProductProps {
-    product: items  // Use 'items' instead of 'Product'
+    product: items;
 }
 
-export default function CardProduct({ product }: CardProductProps ) {
+export default function CardProduct({ product }: CardProductProps,
+    // { params }: { params: Promise<{ slug: string }> }
+) {
     return (
-        <div className="w-full pt-5  ">
-
-            {/* <Link ></Link> */}
-            <a href="/item">
-            <Card className="max-w-xl w-45">
-                <CardContent>
-                    <div className="mt-4">
-                        <img src={product.imageUrl} alt={product.description} className="w-200 aspect-square h-[150px] object-cover border-2" />
-                    </div>
-                    <CardHeader>
-                        <div className="flex justify-start">
-                            <h1>{product.name}</h1>
-                        </div>
-                </CardHeader>
-                    <CardDescription className="text-xs mb-2 line-clamp-2">{product.description}</CardDescription>
-                {/* <CardTitle>{product.name}</CardTitle> */}
-                </CardContent>
-                <CardFooter>{product.price}</CardFooter>
-
-
-
-
-
-
-
-
-
-            {/* <Card className="w-48">
-                <CardContent className="p-3">
-                    <div className="aspect-square rounded-md bg-gray-100 mb-2">
-                        <div className="flex items-center justify-center h-full text-muted-foreground text-xs">
+        <div className="max-w-10 pt-5">
+            <Link href={`/shop/${product.id}`} className="">
+                <Card className="max-w-xl w-45">
+                    <CardContent>
+                        <div className="mt-4">
                             <img
-                                src={product.imageUrl}  // Use actual product image
-                                alt={product.name}      // Use actual product name
-                                className="h-[150px] aspect-square border object-cover"
+                                src={product.imageUrl}
+                                alt={product.description}
+                                className="w-200 aspect-square h-[150px] object-cover border-2"
                             />
                         </div>
-                    </div>
-                    <CardTitle className="text-sm mb-1">{product.name}</CardTitle>
-                    <CardDescription className="text-xs mb-2 line-clamp-2">
-                        {product.description}
-                    </CardDescription>
-                    <div className="flex items-center space-x-1 mb-2">
-                        <div className="flex">
-                            {[1, 2, 3, 4].map((star) => (
-                                <StarIcon
-                                    key={star}
-                                    className="h-3 w-3 fill-yellow-400 text-yellow-400"
-                                />
-                            ))}
-                            <StarIcon className="h-3 w-3 text-gray-300" />
-                        </div>
-                        <span className="text-xs text-muted-foreground">(4.0)</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                        <span className="text-sm font-bold">${product.price}</span>
-                        <Button size="sm" className="text-xs px-2 py-1 h-7">Add</Button>
-                    </div>
-                </CardContent>
-            </Card> */}
-
-
-
-
-
-
-
-
-            </Card>
-</a>
+                        <CardHeader>
+                            <div className="flex justify-start">
+                                <h1>{product.name}</h1>
+                            </div>
+                        </CardHeader>
+                        <CardDescription className="text-xs mb-2 line-clamp-2">
+                            {product.description}
+                        </CardDescription>
+                    </CardContent>
+                    <CardFooter>{product.price}</CardFooter>
+                </Card>
+            </Link>
         </div>
-    )
+    );
 }
