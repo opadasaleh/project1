@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Showform from "../../components/Showform";
 import { gsap } from "gsap";
@@ -8,6 +9,7 @@ import { SplitText } from "gsap/SplitText";
 import { TextPlugin } from "gsap/TextPlugin";
 
 gsap.registerPlugin(ScrollToPlugin,SplitText,TextPlugin);
+
 export default function Home() {
   return (
     <main >
@@ -28,22 +30,28 @@ export default function Home() {
       </div>
       <div className="  justify-center flex relative pb-10">
         <div className=" pr-5 text-center font-semibold transition delay-100 duration-500 ease-in-out hover:-translate-y-1 hover:scale-90 ">
-          <a href="/shop" className="">
+          <Link href="/shop" className="">
             <img src={'/Neckless.webp'} width={250}/>
-           <p className="absolute px-4 text-lg text-white bottom-3">Neckless</p> </a>
-          </div>
+           <p className="absolute px-4 text-lg text-white bottom-3">Neckless</p> 
+          </Link>
+        </div>
         <div className="pr-5 text-center font-semibold transition delay-100 duration-500 ease-in-out hover:-translate-y-1 hover:scale-90 ">
-          <a href="/shop"> 
-            <img src={'/Ring.webp'} width={250}   /></a>
+          <Link href="/shop"> 
+            <img src={'/Ring.webp'} width={250}   />
             <p className="absolute px-4 bottom-3 text-white">Rings</p>
+          </Link>
         </div>
         <div className=" pr-5 text-center font-semibold transition delay-100 duration-500 ease-in-out hover:-translate-y-1 hover:scale-90 ">
-          <a href="/shop"><img src={'/Earrings.webp'} width={250} /></a>
+          <Link href="/shop">
+            <img src={'/Earrings.webp'} width={250} />
            <p className="absolute px-4 text-lg text-white bottom-3">Earrings</p> 
+          </Link>
         </div>
         <div className=" pr-5 text-center font-semibold transition delay-100 duration-500 ease-in-out hover:-translate-y-1 hover:scale-90 ">
-          <a href="/shop"><img src={'/Bracelets.webp'} width={250} /></a>
+          <Link href="/shop">
+            <img src={'/Bracelets.webp'} width={250} />
           <p className="absolute px-4 text-lg text-white bottom-3">Bracelets</p>
+          </Link>
         </div>
       </div>
 
