@@ -4,7 +4,7 @@ import Navbar from '../../../components/Navbar'
 function About() {
   return (
     
-    <div></div>
+    <div>about</div>
   )
 }
 
