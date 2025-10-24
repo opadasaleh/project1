@@ -1,30 +1,37 @@
-import Link from 'next/link';
-import React from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 export default function Navbar() {
   return (
-    <header className="flex flex-row justify-start items-center bg-[#032B52] rounded-tr-full rounded-bl-full
-       p-4  border-2 border-[#DFC9A2] w-full px-10 max-w-[1200px] mx-auto shadow-2xl h-20 ">
+    <header
+      className="flex flex-row justify-start items-center bg-primary rounded-tr-full rounded-bl-full
+       py-8  border-2 border-border/40 w-full px-10 max-w-[1200px] mx-auto shadow-2xl h-20 "
+    >
 
-
-        
-        <h1 className="text-5xl md:text-6xl  text-[#DFC9A2] 
-        pl-10 drop-shadow-lg uppercase font-thin pt-5 pb-7 ">syro </h1>
-        
-        <img src={'/snake.png'}  className="w-20 h-20 
-        p-4  "/>
-      <a className='text-[#DFC9A2] font-thin m-5'>
+      <Image
+        src={"/snake.png"}
+        alt="Logo"
+        className="w-20 h-20 p-4  "
+        width={20}
+        height={20}
+        priority
+      />
+      <h1 className="text-5xl md:text-6xl  text-primary-foreground pr-6 drop-shadow-lg uppercase font-thin font-serif py-4 pt-6 ">
+        syro
+      </h1>
+      <span className="text-primary-foreground font-light m-5">
         <Link href="/">Home</Link>
-      </a>
-      <a className='text-[#DFC9A2] font-thin m-5'>
+      </span>
+      <span className="text-primary-foreground font-light m-5">
         <Link href="/shop">Shop</Link>
-      </a>
-      <a className='text-[#DFC9A2] font-thin m-5'>
+      </span>
+      <span className="text-primary-foreground font-light m-5">
         <Link href="/contact">Contact</Link>
-      </a>
-      <a className='text-[#DFC9A2] font-thin m-5'>
+      </span>
+      <span className="text-primary-foreground font-light m-5">
         <Link href="/about">About</Link>
-      </a>
-      </header>
-  )
+      </span>
+    </header>
+  );
 }
